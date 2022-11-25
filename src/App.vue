@@ -1,5 +1,7 @@
 <script setup>
+// No utilitzat. El deixo com a ajuda/consultes futures.
 import { store } from './swapi.js'
+
 import LogoStarWars from './components/logos/LogoStarWars.vue';
 import Films from './components/Films.vue'
 import SpinnerLoader from './components/SpinnerLoader.vue'
@@ -10,7 +12,6 @@ import SpinnerLoader from './components/SpinnerLoader.vue'
     <LogoStarWars />
     <h4>A <span>Vue.js 3</span> application</h4>
   </header>
-
   <main>
     <Suspense>
       <Films />
@@ -52,24 +53,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   place-content: center;
-}
-.film-card {
-  padding: 12px;
-  color: var(--sw-text-yellow);
-  border: .15em solid var(--sw-text-yellow);
-  border-radius: 5px;
-  width: 200px;
-  min-height: 535px;
-  margin: 10px;
-
-  & {
-    @media only screen and (max-width: $bp-bootstrap-xl) {
-      display: flex;
-      width: 40%;
-      min-height: 200px;
-      padding: 0;
-    }
-  }
 }
 </style>
 

@@ -1,6 +1,4 @@
 <script setup>
-import { onMounted } from 'vue'
-import { store } from '../swapi';
 import FilmCard from './FilmCard.vue'
 
 // Fetch full films json 
@@ -16,7 +14,7 @@ const films = await fetchFilms()
 </script>
 
 <template>
-  <section class="film-card" v-for="(film, index) in films.results">
+  <section class="film-card" v-for="film in films.results">
     <FilmCard :title      = "film['title']" 
               :year       = "film['release_date']" 
               :director   = "film['director']"
@@ -33,9 +31,24 @@ const films = await fetchFilms()
 <style scoped lang="scss">
 @import '../assets/breakpoints.scss';
 
+.film-card {
+  padding: 12px;
+  color: var(--sw-text-yellow);
+  border: .15em solid var(--sw-text-yellow);
+  border-radius: 5px;
+  width: 200px;
+  min-height: 535px;
+  margin: 10px;
 
-@media only screen and (max-width: $bp-bootstrap-md) {
-    section {
+  @media only screen and (max-width: $bp-bootstrap-xl) {
+      display: flex;
+      width: 40%;
+      min-height: 200px;
+      padding: 0;
+    }
+
+  @media only screen and (max-width: $bp-bootstrap-md) {
+    & {
       display: flex;
       flex-direction: column;
     }
@@ -48,4 +61,5 @@ const films = await fetchFilms()
       font-size: 18px;
     }
   }
+}
 </style>

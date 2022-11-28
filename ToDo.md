@@ -1,15 +1,12 @@
 # ToDo
 ## FilmCard.vue: Opening Crawl button
-Un botó a cada ```FilmCard``` que enviï l'opneing crawl al component ```OpeningCrawl```, que tal com el rep carrega la ```<template>``` que serà l'opening crawl típic.
+Button on ```FilmCard``` component what opens its corresponding Opening Crawl.
 
 ## OpeningCrawl.vue
-Component encarregat de rebre el text introductori de la seva pel·lícula (opening crawl) i mostrar-lo full-width.
+Component with a ```prop``` what shows the text.
 
-· Click/Tap on sigui, l'ha de  tancar
+## Stars on Header
+Random stars at load page.
 
-
-## Estrelles Header
-Crear estrelles al Header de forma aleatòria
-
-## Placeholder de Films
-Dibuixar l'estructura bàsica de ```Films.vue``` en tons grisos + animació que engegi i apagui aquesta estructura amb la missió de que la UX sigui més bona que amb només un Spinner.
+## Placeholder Films
+Basic bones of ```Films.vue```, like Flashscore app does.

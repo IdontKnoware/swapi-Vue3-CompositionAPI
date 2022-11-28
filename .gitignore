@@ -29,3 +29,5 @@ coverage
 
 .vscode/
 
+.gitignore
+/src/components/examples/
